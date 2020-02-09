@@ -1,3 +1,13 @@
+<div class="product-items__wrap">
 {% for product in collections.all.products%}
-{{product.title}}
+{% if product.featured_image %}
+<div class="product-item__wrap">
+<img src="{{product.featured_image | img_url: '1000x1000', crop: 'center' }}" alt="" class="product-item__image"/>
+<div class="product-item-details__wrap">
+<div class="product-item__title">{{product.title}}</div>
+<div class="product-item__price">{{product.price | money_without_trailing_zeros }}</div>
+</div>
+</div>
+{% endif %}
 {% endfor %}
+</div>
