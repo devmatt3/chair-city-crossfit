@@ -1,0 +1,8 @@
+/.env
+/.idea
+/node_modules
+/theme/assets/application.js
+/theme/assets/application.js.map
+/theme/assets/application.scss.liquid
+.DS_Store
+scratch.md
